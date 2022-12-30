@@ -7,6 +7,7 @@ const app = express()
 
 const weatherApiKey = 'db9329c6a7b34854de9265bfe31d64bc';
 const userLocationApiKey = 'ed4e8539aad36e';
+const port = process.env.PORT || 3001;
 
 var city, weatherData;
 
@@ -60,6 +61,6 @@ app.get('*',(req, res)=>{
     res.send("File not found, error 404 !")
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('app is listening !!!')
 })
